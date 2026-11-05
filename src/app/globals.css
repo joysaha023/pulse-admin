@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 224 30% 12%;
+    --card: 0 0% 100%;
+    --muted: 220 16% 94%;
+    --muted-foreground: 220 9% 40%;
+    --border: 220 14% 88%;
+    --input: 220 14% 82%;
+    --primary: 239 70% 52%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 239 60% 95%;
+    --destructive: 0 72% 46%;
+    --success: 152 60% 30%;
+    --warning: 32 90% 36%;
+    --ring: 239 70% 52%;
+
+    --chart-1: 239 70% 58%;
+    --chart-2: 172 66% 36%;
+    --chart-3: 32 92% 50%;
+    --chart-4: 340 70% 56%;
+    color-scheme: light;
+  }
+
+  .dark {
+    --background: 224 28% 8%;
+    --foreground: 220 20% 94%;
+    --card: 224 26% 11%;
+    --muted: 224 20% 16%;
+    --muted-foreground: 220 12% 66%;
+    --border: 224 18% 20%;
+    --input: 224 16% 28%;
+    --primary: 239 84% 72%;
+    --primary-foreground: 224 30% 10%;
+    --accent: 239 30% 20%;
+    --destructive: 0 80% 66%;
+    --success: 152 55% 55%;
+    --warning: 36 90% 60%;
+    --ring: 239 84% 72%;
+
+    --chart-1: 239 84% 72%;
+    --chart-2: 172 60% 52%;
+    --chart-3: 36 92% 60%;
+    --chart-4: 340 80% 68%;
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
