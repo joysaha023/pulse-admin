@@ -45,6 +45,8 @@ API (all need a session): `GET /api/customers`, `GET /api/orders` (`page, pageSi
 
 ## Notes
 
+Live Url : https://pulse-admin-3gkm.vercel.app/
+
 - Data lives in memory and resets when the server restarts. To go to production, replace `mock-db.ts` and `users.ts` with a real database (for example Prisma + Postgres) and keep the same function shapes.
 - Deploy on Vercel: import the repo and set `AUTH_SECRET` (and `AUTH_TRUST_HOST=true` if you self-host). Note that in-memory data is not shared between serverless instances, so use a database for anything beyond a demo.
 - Deviation from the original blueprint: the `Metrics` type returns `revenueSeries` / `signupsSeries` (bucketed by the selected range) instead of `revenueByMonth` / `signupsByDay`, plus `changes`, `mrrByPlan`, `topCountries` and `statusDistribution`.
